@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>graph</title>
+    <link rel="stylesheet" href="resurser/css.css">
+    <script src="resurser/classes.js"></script>
+    <script src="resurser/js.js"></script>
+
+</head>
+<body>
+
+<canvas id="board" width="1000" height="1000"></canvas>
+
+<div id="menu">
+    <label for="mod1">place new node</label><input type="radio" name="mode" id="mod1" onclick="getmode()">
+    <label for="mod2">connect two nodes</label><input type="radio" name="mode" id="mod2" onclick="getmode()">
+    <label for="mod3">remove node</label><input type="radio" name="mode" id="mod3" onclick="getmode()">
+    <br>
+    <button onclick="clearMode();getmode()">Clear mode</button>
+</div>
+</body>
+</html>
