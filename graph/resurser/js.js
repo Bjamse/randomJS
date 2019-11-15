@@ -4,7 +4,6 @@ let canvas; //variable for the canvas (not init yet)
 let ctx; //canvas context variable (not init yet)
 
 let g; //graph variable
-let canvasSize = [];
 function boot(){
     canvas = document.getElementById("board");// init canavas
     ctx = canvas.getContext("2d");//  init context for canvas
@@ -22,15 +21,17 @@ function boot(){
         document.getElementById("board").getBoundingClientRect().height
     ]
 }
-//lag kant til musa
-// switch (mode) {
-//     case 1:
-//         if (select0 !== null){
-//             ctx.beginPath();
-//             ctx.moveTo( )
-//         }
-//         break;
-// }
+
+let mouseButton = false;
+document.onmousedown = function () { mouseButton = true;};
+document.onmouseup = function () { mouseButton = false;};
+let mousePos= [0,0];
+document.onmousemove = move;
+function move(evt){
+    mousePos = [evt.clientX, evt.clientY];
+    g.updateRect();
+}
+
 
 
 let select0 = null;
@@ -39,6 +40,20 @@ function animate() {
     requestAnimFrame( animate );
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     g.draw();
+
+    switch (mode) {
+        case 1:
+            if (select0 !== null){
+                ctx.beginPath();
+                ctx.moveTo(select0.x,select0.y);
+                ctx.lineTo(
+                    (mousePos[0]-g.rect.left)*(g.rect.width/1000),
+                    (mousePos[1]-g.rect.top)*(g.rect.height/1000)
+                );
+                ctx.stroke();
+            }
+            break;
+    }
 
 }
 window.requestAnimFrame = (function(){

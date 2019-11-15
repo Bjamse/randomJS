@@ -84,7 +84,11 @@ class Edge {
 }
 class Graph{
     constructor(){
-        this.nodes = []
+        this.nodes = [];
+        this.rect = document.getElementById("board").getBoundingClientRect();
+    }
+    updateRect(){
+        this.rect = document.getElementById("board").getBoundingClientRect();
     }
     drawNodes(){
         for(let i = 0; i < this.nodes.length; i++){
