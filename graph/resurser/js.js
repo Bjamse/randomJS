@@ -1,4 +1,3 @@
-
 window.onload = boot;
 let canvas; //variable for the canvas (not init yet)
 let ctx; //canvas context variable (not init yet)

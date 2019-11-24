@@ -1,0 +1,23 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-color: #93b9cd;
+}
+
+canvas#canvas{
+    background-color: white;
+    position: absolute;
+    height: calc(100vh - 2px);
+    width: calc(100vh - 2px);
+    margin: auto;
+    padding: 0;
+    border: 2px solid black;
+    left: calc(50vw - 50vh);
+
+
+    -webkit-box-shadow: 10px 10px 31px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 31px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 31px 0px rgba(0,0,0,0.75);
+}
