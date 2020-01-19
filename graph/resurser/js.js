@@ -46,10 +46,10 @@ function animate() {
                 ctx.beginPath();
                 ctx.moveTo(select0.x,select0.y);
                 ctx.lineTo(
-                    (mousePos[0]-g.rect.left)*(g.rect.width/1000),
-                    (mousePos[1]-g.rect.top)*(g.rect.height/1000)
+                    (mousePos[0]-g.rect.left)*(1000/g.rect.width),
+                    (mousePos[1]-g.rect.top)*(1000/g.rect.height)
                 );
-                ctx.stroke();
+                ctx.stroke();   
             }
             break;
     }
