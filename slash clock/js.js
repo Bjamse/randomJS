@@ -48,6 +48,8 @@ function draw(x,y, bool){
 function drawNumber(n,m){
     console.log("tall:"+n+"     plass:"+m);
     let start;
+
+    // draw offset per number
     switch(m){
         case 1:
             start = [1,1];
