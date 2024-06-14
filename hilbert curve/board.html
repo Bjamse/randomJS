@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hilbert</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js"></script>
+
+</head>
+<body>
+
+<table style="position: fixed; background: lightgreen; border-radius: 4px; padding:10px; border: solid black 2px; z-index: 5">
+    <tr>
+        <td> <label for="slider">Level:</label> </td>
+        <td><input id="slider" type="range" min="0" max="5"  onchange=" curve =[]; running = false; curve = hilbert(document.getElementById('slider').value, 0, 0, 800, 800, 0, false).flat(Infinity); draw();"></td>
+    </tr>
+    <tr>
+        <td><label for="colorSwitcher" >Colours:</label> </td>
+        <td><input id="colorSwitcher" type="checkbox" onchange="colorSwitchOff = !colorSwitchOff; if(!running){clear(); draw();}" ></td>
+    </tr>
+    <tr>
+        <td><button onclick="startAnimation()">Animate!</button></td>
+    </tr>
+</table>
+<canvas id="canvas" width="800" height="800"></canvas>
+</body>
+</html>
