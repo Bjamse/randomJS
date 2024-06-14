@@ -13,10 +13,28 @@
 <canvas id="board" width="1000" height="1000"></canvas>
 
 <div id="menu">
-    <label for="mod1">place new node</label><input type="radio" name="mode" id="mod1" onclick="getmode()">
-    <label for="mod2">connect two nodes</label><input type="radio" name="mode" id="mod2" onclick="getmode()">
-    <label for="mod3">add node</label><input type="radio" name="mode" id="mod3" onclick="getmode()">
-    <label for="mod4">remove node</label><input type="radio" name="mo   de" id="mod4" onclick="getmode()">
+    <table>
+        <tr>
+            <td><label for="mod1">place new node</label></td>
+            <td><input type="radio" name="mode" id="mod1" onclick="getmode()"></td>
+        </tr>
+        <tr>
+            <td><label for="mod2">connect two nodes</label></td>
+            <td><input type="radio" name="mode" id="mod2" onclick="getmode()"></td>
+        </tr>
+        <tr>
+            <td><label for="mod3">add node</label></td>
+            <td><input type="radio" name="mode" id="mod3" onclick="getmode()"></td>
+        </tr>
+        <tr>
+            <td><label for="mod4">remove node</label></td>
+            <td><input type="radio" name="mo   de" id="mod4" onclick="getmode()"></td>
+        </tr>
+
+
+    </table>
+    <br>
+    <br>
 
     <br>
     <button onclick="clearMode();getmode()">Clear mode</button>

@@ -8,6 +8,10 @@ html,body {
 body{
     background-color: lightgray;;
 }
+tr{
+    border: solid black 1px;
+}
+
 canvas#board{
     background-color: white;
     position: absolute;
